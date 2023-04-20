@@ -1,0 +1,110 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<figure class="text-center" >
+  <blockquote class="blockquote" >
+    <h1>BARBER.COM</h1>
+  </blockquote>
+  <figcaption class="blockquote-footer">Best barber in town</figcaption>
+</figure>
+
+<div class="hstack gap-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://e1.pxfuel.com/desktop-wallpaper/1021/606/desktop-wallpaper-dawidek-dawidek-on-zdj%C4%99cia-memoji-boy.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" >Ahmad</h5>
+            <p class="card-text">A boy from rosario playing alongside Messi and his retirement's dream is being a barber</p>
+          </div>
+        </div>
+
+
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://e1.pxfuel.com/desktop-wallpaper/542/821/desktop-wallpaper-pin-oleh-memoji-boy.jpg" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title">Fida</h5>
+            <p class="card-text">An ambitious boy from Perak. He had a devil-may-care outlook and a stellar smile. French crop is a trash for him.</p>
+          </div>
+          </div>
+
+
+            <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://e1.pxfuel.com/desktop-wallpaper/1014/922/desktop-wallpaper-emojivip-memoji-boy.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Tuan</h5>
+                  <p class="card-text">A tall specky huge fans of SVG x Supersunday. He can fast for 10 days for a piece of shirt. </p>
+              </div>
+            </div>
+    </div>
+
+<div class="vstack gap-5">
+    <form method="POST">
+  <h3 align="center">Order Now!</h3>
+  <div class="form-group">
+    <label for="barber33">Barber</label>
+    <input
+      type="barber33"
+      class="form-control"
+      id="barber33"
+      name="barber33"
+      placeholder="Enter barber name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="barber22">Haircut</label>
+    <input
+      type="barber22"
+      class="form-control"
+      id="barber22"
+      name="barber22"
+      placeholder="Enter haircut"
+    />
+  </div>
+        <div class="form-group">
+    <label for="barber44">Appointment Time</label>
+    <input
+      type="barber22"
+      class="form-control"
+      id="barber44"
+      name="barber44"
+      placeholder="Enter Appointment Time"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">submit</button>
+</form>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Barber</th>
+      <th scope="col">Haircut style</th>
+      <th scope="col">Appointment Time</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row">{% for barber22 in barber11.haircuts %}
+          {{ barber22.id }}<br>
+          {% endfor %}
+<!--          1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10-->
+      </th>
+      <td>{% for barber33 in barber11.barbers %}
+               {{ barber33.barber }}<br>
+          {% endfor %}</td>
+      <td>{% for barber22 in barber11.haircuts %}
+                {{ barber22.haircut }}<br>
+          {% endfor %}</td>
+      <td>{% for barber44 in barber11.times %}
+                {{ barber44.time }}<br>
+          {% endfor %}</td>
+      <td>
+             {% for barber55 in barber11.statuss %}
+                {{ barber55.status }}<br>
+          {% endfor %}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

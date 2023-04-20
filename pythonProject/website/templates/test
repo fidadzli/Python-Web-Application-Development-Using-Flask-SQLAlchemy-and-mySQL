@@ -1,0 +1,145 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<figure class="text-center" >
+  <blockquote class="blockquote" >
+    <h1>BARBER.COM</h1>
+  </blockquote>
+  <figcaption class="blockquote-footer">Best barber in town</figcaption>
+</figure>
+
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0">
+    <ul class="list-group list-group-flush" id="notes">
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="note" id="note"  cols="25"></textarea>
+      <br />
+      <div align="centre">
+        <button type="submit" class="btn btn-primary">
+          <img src="https://i.ibb.co/CW5Wvry/buttonpng.png"
+               alt="buttonpng" border="0" width="10" height="10" />Add Note</button>
+      </div>
+    </form>
+  </div>
+  <div class="position-absolute top-0 start-50 translate-middle-x">
+    <ul class="list-group list-group-flush" id="notes">
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="note" id="note" cols="25"></textarea>
+      <br />
+      <div align="centre">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+      </div>
+    </form>
+    </div>
+  <div class="position-absolute top-0 end-0">
+    <ul class="list-group list-group-flush" id="notes">
+      {% for note in user.notes %}
+      <li class="list-group-item">
+        {{ note.data }}
+        <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ul>
+    <form method="POST">
+      <textarea name="note" id="note3" cols="25"></textarea>
+      <br />
+      <div align="centre">
+        <button type="submit" class="btn btn-primary">Add Note</button>
+      </div>
+    </form></div>
+</div>
+
+
+
+
+{% endblock %}
+
+<div class="vstack gap-4">
+        <ul id="notes">
+              {% for note in user.notes %}
+              <li class="list-group-item">
+                {{ note.data }}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </li>
+              {% endfor %}
+            </ul>
+        <form method="POST">
+              <textarea name="note" id="note" cols="50"></textarea>
+              <br />
+              <div align="centre">
+                <button type="submit" class="btn btn-primary">Add Note</button>
+              </div>
+            </form>
+        <ul id="haircuts">
+                  {% for haircut in user.haircuts %}
+                  <li class="list-group-item">
+                    {{ haircut.data }}
+                    <button type="button" class="close" onClick="deleteNote({{ haircut.id }})">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </li>
+                  {% endfor %}
+                </ul>
+            <form method="POST">
+                  <textarea name="haircut" id="haircut" cols="50"></textarea>
+                  <br />
+                  <div align="centre">
+                    <button type="submit" class="btn btn-primary">Add Haircut</button>
+                  </div>
+                </form>
+        <ul id="apptimes">
+              {% for apptime in user.apptimes %}
+              <li class="list-group-item">
+                {{ apptime.data }}
+                <button type="button" class="close" onClick="deleteNote({{ apptime.id }})">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </li>
+              {% endfor %}
+            </ul>
+        <form method="POST">
+              <textarea name="apptime" id="apptime" cols="50"></textarea>
+              <br />
+              <div align="centre">
+                <button type="submit" class="btn btn-primary">Add Appointment Time</button>
+              </div>
+            </form>
+        <ul id="contacts">
+                  {% for contact in user.contacts %}
+                  <li class="list-group-item">
+                    {{ contact.data }}
+                    <button type="button" class="close" onClick="deleteNote({{ contact.id }})">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </li>
+                  {% endfor %}
+                </ul>
+            <form method="POST">
+                  <textarea name="contact" id="contact" cols="50"></textarea>
+                  <br />
+                  <div align="centre">
+                    <button type="submit" class="btn btn-primary">Add Contact</button>
+                  </div>
+                </form>
+</div>

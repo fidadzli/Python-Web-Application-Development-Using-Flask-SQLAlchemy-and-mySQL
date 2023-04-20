@@ -1,0 +1,68 @@
+{% extends "base.html" %} {% block title %}Status{% endblock %} {% block content
+%}
+
+<figure class="text-center" >
+  <blockquote class="blockquote" >
+    <h1>BARBER.COM</h1>
+  </blockquote>
+  <figcaption class="blockquote-footer">feels handsome like a king</figcaption>
+</figure>
+
+<div class="position-relative">
+  <div class="position-absolute top-0 start-0">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://e1.pxfuel.com/desktop-wallpaper/1021/606/desktop-wallpaper-dawidek-dawidek-on-zdj%C4%99cia-memoji-boy.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ahmad</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <form method="POST">
+          <a class="btn btn-primary" id="barber1">Add Barber</a></form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="position-relative">
+<div class="position-absolute top-0 start-50 translate-middle-x">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="https://e1.pxfuel.com/desktop-wallpaper/542/821/desktop-wallpaper-pin-oleh-memoji-boy.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Fida</h5>
+        <p class="card-text">An ambitious boy from Perak. He had a devil-may-care outlook and a stellar smile. French crop is a trash for him.</p>
+        <form method="POST">
+        <a class="btn btn-primary" id="barber2">Add Barber</a></form>
+      </div>
+    </div>
+</div>
+</div>
+<div class="position-relative">
+<div class="position-absolute top-0 end-0">
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://e1.pxfuel.com/desktop-wallpaper/1014/922/desktop-wallpaper-emojivip-memoji-boy.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Tuan</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <form method="POST">
+        <a class="btn btn-primary" id="barber3">Add Barber</a></form>
+      </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
